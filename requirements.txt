@@ -1,0 +1,16 @@
+# Versions used to produce every number and figure in the manuscript.
+# `environment.yml` is the conda equivalent and pins the same set.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.9
+# Not needed to reproduce anything in the deposit:
+# python-docx  -- read by `check_list_numbering.py` and `check_markdown_leak.py`,
+#                 which inspect the Word build of the manuscript. Those are
+#                 manuscript production tooling and are not deposited, so no
+#                 deposited script imports it. Installed version here is 1.2.0.
+# pyodbc==5.2.0 -- Ohio RBDMS rebuild only; needs the Access ODBC driver, and
+#                 `oh_build.py` is not run by `run_all.sh` (its output,
+#                 `oh_analysis.csv`, is deposited). On Linux/macOS `mdbtools`
+#                 is the alternative, and it is not a Python package.

@@ -1,0 +1,40 @@
+# Environment for "Group-identifier leakage in unconventional production models".
+#
+#     conda env create -f environment.yml
+#     conda activate p3-leakage
+#     bash run_all.sh
+#
+# Versions are the ones the deposited results were produced with, pinned rather
+# than bounded, because the reported quantity is a difference between two
+# partitions of one table and both partitions depend on scikit-learn's splitter
+# RNG and on HistGradientBoostingRegressor's binning. A different scikit-learn
+# will still reproduce the paper's conclusions; it will not reproduce the third
+# decimal place of every cell.
+#
+# pyodbc is needed only to read Ohio's RBDMS Access database in `oh_build.py`,
+# and only on a machine with the Microsoft Access ODBC driver. On Linux and
+# macOS the alternative is `mdbtools`, which is NOT a Python package and so
+# cannot be pinned here: install it from the system package manager (`apt
+# install mdbtools`, `brew install mdbtools`). Every downstream script reads the
+# derived CSVs, which are deposited, so the rest of the pipeline runs without
+# either. pyodbc is listed under pip and may fail to build on Linux; that
+# failure is not fatal to reproduction.
+#
+# python-docx is deliberately NOT listed. It is imported only by
+# `check_list_numbering.py` and `check_markdown_leak.py`, which inspect the Word
+# build of the manuscript; neither is deposited and no deposited script imports
+# it. An earlier version pinned it at 1.1.2 while 1.2.0 was installed, so the
+# one pin that was wrong was also the one nothing needed.
+name: p3-leakage
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=2.4.4
+  - pandas=3.0.2
+  - scipy=1.17.1
+  - scikit-learn=1.8.0
+  - matplotlib=3.10.9
+  - pip
+  - pip:
+      - pyodbc==5.2.0          # Ohio RBDMS only; see the note above

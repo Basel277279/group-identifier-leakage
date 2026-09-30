@@ -1,0 +1,34 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Basel Alrawi, Wenhui Huang and Xiaoping Mao
+
+You are free to share (copy and redistribute the material in any medium or
+format) and adapt (remix, transform, and build upon the material) for any
+purpose, even commercially, under the following terms:
+
+  Attribution - You must give appropriate credit, provide a link to the
+  licence, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+No additional restrictions - You may not apply legal terms or technological
+measures that legally restrict others from doing anything the licence permits.
+
+The full licence text is at https://creativecommons.org/licenses/by/4.0/legalcode
+
+The derived state tables in Data/ are reductions of public records published
+by the Pennsylvania Department of Environmental Protection, the Ohio
+Department of Natural Resources, the New Mexico Oil Conservation Division and
+the Colorado Energy and Carbon Management Commission. Those agencies' own
+terms govern their raw files; this licence covers the code in this deposit and
+the derived tables built from them, which are our processing and not verbatim
+agency files. `SOURCES.md` records the origin of each of the 82 raw inputs and
+`DATA_DICTIONARY.md` distinguishes our processing from the agency's for every
+column.
+
+Cite as:
+
+  Alrawi, B., Huang, W., Mao, X., 2026. Derived tables and analysis code for
+  "Group-identifier leakage in unconventional production models: ordinary
+  covariates identify the well pad". Zenodo.
+  https://doi.org/10.5281/zenodo.22998446
