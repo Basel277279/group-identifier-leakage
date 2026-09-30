@@ -1,0 +1,17 @@
+# Run output. Every script writes its console output beside itself, and
+# run_all.sh drops one log per script; none of it is part of the repository.
+log_*.out
+v_*.out
+
+# The derived state tables are research data, not code. They are archived at
+# doi:10.5281/zenodo.22998446 and README.md says to unpack them here; a 139 MB
+# copy of somebody else's download does not belong in the history.
+Data/
+
+# Build products of the authors' working folder.
+__pycache__/
+*.pyc
+deposit/
+deposit.zip
+code_repository/
+*.bak
